@@ -1,0 +1,57 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import 'mixin';
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  padding-top: 76px;
+  @include media-breakpoint-up(md) {
+    padding-top: 92px;
+  }
+  &.payment-page {
+    background-color: $black;
+  }
+}
+
+@import './layout/index';
+@import './component/navbar';
+@import './component/footer';
+
+
+
+@import './component/button';
+@import './component/title';
+@import './component/separator';
+@import './component/datepicker';
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media-breakpoint-up(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.modal--login {
+  .modal-content {
+    > * {
+      max-width: 363px; // 331+16+16
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: 26px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+  }
+}
